@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="718.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CarrerasGUI">
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="96.0" layoutX="75.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados2.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="65.0" text="N:">
+         <font>
+            <Font name="Bebas" size="44.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cantidadAlgoritmos" layoutX="61.0" layoutY="64.0" prefHeight="25.0" prefWidth="177.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#ffffff00" height="200.0" layoutX="25.0" layoutY="156.0" stroke="#e3dfdf" width="200.0" />
+      <RadioButton fx:id="add" layoutX="51.0" layoutY="186.0" mnemonicParsing="false" text="Add">
+         <font>
+            <Font name="Bebas" size="27.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="algorithm" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="search" layoutX="49.0" layoutY="243.0" mnemonicParsing="false" text="Search" toggleGroup="$algorithm">
+         <font>
+            <Font name="Bebas" size="27.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="delete" layoutX="50.0" layoutY="302.0" mnemonicParsing="false" text="Delete" toggleGroup="$algorithm">
+         <font>
+            <Font name="Bebas" size="27.0" />
+         </font>
+      </RadioButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#ffffff00" height="140.0" layoutX="237.0" layoutY="156.0" stroke="#e3dfdf" width="171.0" />
+      <RadioButton fx:id="iterative" layoutX="243.0" layoutY="188.0" mnemonicParsing="false" text="Iterative">
+         <font>
+            <Font name="Bebas" size="25.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="mode" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="recursive" layoutX="243.0" layoutY="241.0" mnemonicParsing="false" text="Recursive" toggleGroup="$mode">
+         <font>
+            <Font name="Bebas" size="25.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="237.0" layoutY="309.0" mnemonicParsing="false" onAction="#run" prefHeight="45.0" prefWidth="172.0" style="-fx-background-color: #1e6ae3; -fx-background-radius: 5;" text="Run" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bebas" size="26.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#ffffff00" height="84.0" layoutX="263.0" layoutY="25.0" stroke="#e3dfdf" width="329.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="8.0" prefHeight="45.0" prefWidth="177.0" style="-fx-background-color: #1e6ae3; -fx-background-radius: 10;" text="Timekeeper" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bebas" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#b43a3a00" height="35.0" layoutX="282.0" layoutY="62.0" stroke="#b4b4b4" width="191.0" />
+      <Label fx:id="clockCronometro" layoutX="319.0" layoutY="57.0" prefHeight="35.0" prefWidth="118.0" text="00:00:00">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Circle fx:id="circuloGrande" fill="#1f93ff00" layoutX="534.0" layoutY="67.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+      <Circle fx:id="circuloPequeno" fill="#1f93ff00" layoutX="534.0" layoutY="67.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="128.0" prefHeight="45.0" prefWidth="148.0" style="-fx-background-color: #1e6ae3; -fx-background-radius: 10;" text="Algorithm" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bebas" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="268.0" layoutY="128.0" prefHeight="40.0" prefWidth="110.0" style="-fx-background-color: #1e6ae3; -fx-background-radius: 10;" text="Mode" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bebas" size="30.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#ffffff00" height="200.0" layoutX="425.0" layoutY="156.0" stroke="#e3dfdf" width="200.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="437.0" layoutY="129.0" prefHeight="40.0" prefWidth="177.0" style="-fx-background-color: #1e6ae3; -fx-background-radius: 10;" text="Final results" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Bebas" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="437.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/motor%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="57.0" layoutX="437.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/motor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="54.0" fitWidth="57.0" layoutX="437.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/motor%20(1).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="425.0" layoutY="228.0" prefWidth="200.0" />
+      <Separator layoutX="425.0" layoutY="291.0" prefWidth="200.0" />
+      <Label layoutX="520.0" layoutY="172.0" text="ArrayList">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="234.0" text="LinkedList">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="540.0" layoutY="297.0" text="ABB">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="clockArrayList" layoutX="517.0" layoutY="195.0" text="00:00:00">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="clockLista" layoutX="517.0" layoutY="258.0" text="00:00:00">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="clockArbol" layoutX="517.0" layoutY="320.0" text="00:00:00">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#b43a3a00" height="27.0" layoutX="517.0" layoutY="197.0" stroke="#b4b4b4" width="81.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#b43a3a00" height="27.0" layoutX="516.0" layoutY="260.0" stroke="#b4b4b4" width="81.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="MULTIPLY" fill="#b43a3a00" height="27.0" layoutX="517.0" layoutY="323.0" stroke="#b4b4b4" width="81.0" />
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="624.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="624.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="624.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="624.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="630.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/coche-de-competicion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="630.0" layoutY="256.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/coche-de-competicion%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="-20.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="96.0" layoutX="167.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/cuadrados.png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="pbArray" layoutX="132.0" layoutY="390.0" prefHeight="36.0" prefWidth="534.0" progress="0.0" />
+      <Separator layoutX="1.0" layoutY="365.0" prefHeight="11.0" prefWidth="718.0" />
+      <ImageView fitHeight="72.0" fitWidth="61.0" layoutX="39.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/coche.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="-4.0" layoutY="443.0" prefHeight="11.0" prefWidth="725.0" />
+      <ImageView fitHeight="72.0" fitWidth="61.0" layoutX="39.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/coche%20(2).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="-4.0" layoutY="523.0" prefHeight="11.0" prefWidth="725.0" />
+      <ImageView fitHeight="72.0" fitWidth="61.0" layoutX="39.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/coche%20(1).png" />
+         </image>
+      </ImageView>
+      <ProgressBar fx:id="pbListas" layoutX="132.0" layoutY="469.0" prefHeight="36.0" prefWidth="534.0" progress="0.0" />
+      <ProgressBar fx:id="pbArbol" layoutX="130.0" layoutY="547.0" prefHeight="36.0" prefWidth="534.0" progress="0.0" />
+   </children>
+</Pane>
